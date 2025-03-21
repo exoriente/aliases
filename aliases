@@ -1,0 +1,26 @@
+# Git aliases
+
+git_squash() {
+    msg=$(git show --format=%B -s)
+    git reset --soft $(git merge-base @ $1)
+    git commit --message $msg
+}
+
+alias gsq='git_squash'
+alias gcar='git commit -v -a --no-edit --reset-author --amend'
+
+# indirs
+
+in_directories() {
+    for dir in *; do
+        if [ -d $dir ]; then
+            pushd $dir > /dev/null
+            echo
+            echo 📂 $dir
+            bash -c "$1"
+            popd > /dev/null
+        fi
+    done
+}
+
+alias indirs=in_directories
