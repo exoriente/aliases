@@ -17,7 +17,7 @@ in_directories() {
             pushd $dir > /dev/null
             echo
             echo 📂 $dir
-            eval "$1"
+            eval "$1" || true
             popd > /dev/null
         fi
     done
