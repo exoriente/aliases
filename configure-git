@@ -1,0 +1,19 @@
+#!/bin/bash
+
+script_dir=$(dirname "$0")
+
+codeberg_config_file=~/.gitconfig.codeberg.inc
+github_config_file=~/.gitconfig.github.inc
+global_gitignore=~/.gitignore
+
+cp $script_dir/global-git-ignore $global_gitignore
+
+git config --file $codeberg_config_file user.name talewright
+git config --file $codeberg_config_file user.email oosten+codeberg@protonmail.com
+
+git config --file $github_config_file user.name exoriente
+git config --file $github_config_file user.email oosten@gmail.com
+
+git config --global core.excludesfile ~/.gitignore
+git config --global includeIf."hasconfig:remote.*.url:**/*codeberg*/**".path $codeberg_config_file
+git config --global includeIf."hasconfig:remote.*.url:**/*github*exoriente/**".path $github_config_file
