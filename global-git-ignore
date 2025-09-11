@@ -7,6 +7,10 @@
 .python-version
 .venv/
 
+# python
+
+__pycache__/
+
 # PyCharm
 
 .idea/
