@@ -2,9 +2,10 @@
 
 .DS_Store
 
-# pyenv
+# virtual python environments
 
 .python-version
+.venv/
 
 # PyCharm
 
