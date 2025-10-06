@@ -22,3 +22,4 @@ git config --global core.excludesfile ~/.gitignore
 git config --global includeIf."hasconfig:remote.*.url:**/*codeberg*/**".path $codeberg_config_file
 git config --global includeIf."hasconfig:remote.*.url:**/*github*exoriente*/**".path $github_config_file
 git config --global includeIf."hasconfig:remote.*.url:**/*github*/**/*afkl*/**".path $github_afkl_config_file
+git config --global pager.branch false
