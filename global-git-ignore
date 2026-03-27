@@ -15,6 +15,10 @@ __pycache__/
 
 .idea/
 
+# Rust
+
+.cargo/
+
 # direnv
 
 .envrc
