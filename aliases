@@ -9,6 +9,7 @@ git_squash() {
 alias gsq='git_squash'
 alias gcar='git commit -v -a --no-edit --reset-author --amend'
 alias gcoh='git reflog show | grep checkout | head'
+alias gcundo='git reset --soft HEAD~1'
 
 # indirs
 
